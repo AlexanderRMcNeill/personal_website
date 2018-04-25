@@ -14,8 +14,9 @@ module "website" {
     custom_error_response_objects = [
         {
             error_code = "404"
-            response_code = "404"
-            response_page_path = "/404.html"
+            error_caching_min_ttl = 0
+            response_code = "200"
+            response_page_path = "/index.html"
         }
     ]
 }
